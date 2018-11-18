@@ -10,6 +10,7 @@ import (
 	"sort"
 	"encoding/hex"
 	"crypto/md5"
+	"encoding/json"
 )
 
 
@@ -41,6 +42,28 @@ func GetRequestValueStr(r *http.Request, key string) string {
 		}
 	}
 	return val
+}
+
+func GetRequestValueBool(r *http.Request, key string) bool {
+	val := r.FormValue(key)
+	if val == "" {
+		val, _ = mux.Vars(r)[key]
+	}
+	switch val {
+	case "true":
+		return true
+	case "false":
+		return false
+	}
+	return false
+}
+
+func GetRequestInterface(r *http.Request, result *interface{}) *interface{} {
+	if err := json.NewDecoder(r.Body).Decode(result); err != nil {
+		log.Errorf("[GetRequestInterface] 解析错误: %v\n", err)
+		return nil
+	}
+	return result
 }
 
 func StrToint(str string) int64 {

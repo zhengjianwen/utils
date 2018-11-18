@@ -4,9 +4,11 @@ import (
 	"net/http"
 
 	"github.com/gorilla/securecookie"
+	"github.com/zhengjianwen/utils/tools"
+	"fmt"
 )
 
-const USER_COOKIE_NAME = "hairui"
+const USER_COOKIE_NAME = "hairui"   // cookieName
 
 var SecureCookie *securecookie.SecureCookie
 
@@ -19,21 +21,23 @@ func Init() {
 type CookieData struct {
 	UserId   int64
 	Username string
+	Token    string     // 单点登录使用
+	Name     string
 }
 
-func ReadUser(r *http.Request) (int64, string) {
+func ReadUser(r *http.Request) (*CookieData,error) {
 	if cookie, err := r.Cookie(USER_COOKIE_NAME); err == nil {
 		var value CookieData
 		if err = SecureCookie.Decode(USER_COOKIE_NAME, cookie.Value, &value); err == nil {
-			return value.UserId, value.Username
+			return &value, nil
 		}
 	}
 
-	return 0, ""
+	return nil, fmt.Errorf("")
 }
 
-func WriteUser(w http.ResponseWriter, id int64, username string) error {
-	value := CookieData{UserId: id, Username: username}
+func WriteUser(w http.ResponseWriter, value *CookieData) error {
+	value.Token = tools.GenNubToken(16)
 	encoded, err := SecureCookie.Encode(USER_COOKIE_NAME, value)
 	if err != nil {
 		return err
