@@ -16,12 +16,6 @@ func EncryptPassword(password string) string {
 	return encrypt
 }
 
-// 获取当前时间戳
-func NowTimestamp() int64 {
-	t := time.Now()
-	timestamp := t.UTC().UnixNano() / 1000000000
-	return timestamp
-}
 
 // 必须是时间戳
 func StrtoTimestamp(data string) int64 {
