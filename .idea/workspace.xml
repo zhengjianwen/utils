@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9efb5a61-30ce-4b93-8220-e2cce6dbb5c1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/CHANGELOG.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/LICENSE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/actions.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/daemonize.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/echo_server/daemon.pid" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/echo_server/echo_server" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/echo_server/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/graceful_http/daemon.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/graceful_http/graceful.pid" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/graceful_http/graceful_http" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/graceful_http/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/notify_parent/daemon.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/notify_parent/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/daemongo/examples/open-falcon_agent.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tools/time.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tools/tools_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tools/transferred.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/tools/randstr.go" afterPath="$PROJECT_DIR$/tools/randstr.go" />
     </list>
@@ -33,7 +19,7 @@
       <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wx/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="0">
               <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="e#12#25#0" expanded="true" />
@@ -45,7 +31,7 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="286">
               <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding>
                 <element signature="e#14#75#0" expanded="true" />
@@ -67,7 +53,7 @@
       <file leaf-file-name="time.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/time.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="319">
               <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="22" />
               <folding>
                 <element signature="e#15#33#0" expanded="true" />
@@ -98,12 +84,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="randstr.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tools/randstr.go">
+      <file leaf-file-name="transferred.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/transferred.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="440">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#15#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tools_test.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/tools_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+              <folding>
+                <element signature="e#15#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,6 +160,8 @@
         <option value="$PROJECT_DIR$/http/res/request.go" />
         <option value="$PROJECT_DIR$/http/request/request.go" />
         <option value="$PROJECT_DIR$/time/time.go" />
+        <option value="$PROJECT_DIR$/tools/transferred.go" />
+        <option value="$PROJECT_DIR$/tools/tools_test.go" />
         <option value="$PROJECT_DIR$/tools/randstr.go" />
       </list>
     </option>
@@ -195,6 +197,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,7 +214,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Test.TestTransferredToHtml in tools_test.go">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="utils" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -252,24 +254,42 @@
       <package value="github.com/zhengjianwen/utils" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
+    <configuration name="TestTransferredToHtml in tools_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+      <module name="utils" />
+      <working_directory value="$PROJECT_DIR$/tools" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/zhengjianwen/utils/tools" />
+      <pattern value="^TestTransferredToHtml$" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Test.TestTransferredToHtml in tools_test.go" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Go Test.TestTransferredToHtml in tools_test.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestTransferredToHtml_in_tools_test_go - 2019.05.09 at 15h 36m 51s.xml">
+      <configuration name="TestTransferredToHtml in tools_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17359413" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17542787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.073033705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5359551" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -297,6 +317,87 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wx/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="e#14#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wx/urls.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="22" />
+          <folding>
+            <element signature="e#15#33#0" expanded="true" />
+            <element signature="n#!!block;n#NowTimestamp#0" expanded="false" />
+            <element signature="n#!!block;n#NowDateFormat#0" expanded="false" />
+            <element signature="n#!!block;n#NowDateDate#0" expanded="false" />
+            <element signature="n#!!block;n#NowDateTime#0" expanded="false" />
+            <element signature="n#!!block;n#DateTimeToTimestamp#0" expanded="false" />
+            <element signature="n#!!block;n#DateTimeToDate#0" expanded="false" />
+            <element signature="n#!!block;n#TimestampToFormat#0" expanded="false" />
+            <element signature="n#!!block;n#TimestampToDate#0" expanded="false" />
+            <element signature="n#!!block;n#TimestampToTime#0" expanded="false" />
+            <element signature="n#!!block;n#TimeToTimestamp#0" expanded="false" />
+            <element signature="n#!!block;n#TimeToFormat#0" expanded="false" />
+            <element signature="n#!!block;n#TimeToDate#0" expanded="false" />
+            <element signature="n#!!block;n#TimeToTime#0" expanded="false" />
+            <element signature="n#!!block;n#DateTimeID#0" expanded="false" />
+            <element signature="n#!!block;n#DateID#0" expanded="false" />
+            <element signature="n#!!block;n#TimeID#0" expanded="false" />
+            <element signature="n#!!block;n#Year#0" expanded="false" />
+            <element signature="n#!!block;n#Month#0" expanded="false" />
+            <element signature="n#!!block;n#Day#0" expanded="false" />
+            <element signature="n#!!block;n#Hour#0" expanded="false" />
+            <element signature="n#!!block;n#Minute#0" expanded="false" />
+            <element signature="n#!!block;n#Second#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wx/sendmsg.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="65" column="17" lean-forward="false" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="17" />
+          <folding>
+            <element signature="e#12#118#0" expanded="true" />
+            <element signature="e#138#213#0" expanded="false" />
+            <element signature="e#872#908#0" expanded="false" />
+            <element signature="e#1984#2320#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/randstr.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wx/config.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -565,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="286">
           <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding>
             <element signature="e#14#75#0" expanded="true" />
@@ -575,7 +676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wx/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="0">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="e#12#25#0" expanded="true" />
@@ -583,9 +684,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tools/transferred.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/randstr.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tools/time.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="319">
           <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="22" />
           <folding>
             <element signature="e#15#33#0" expanded="true" />
@@ -615,11 +734,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/randstr.go">
+    <entry file="file://$PROJECT_DIR$/tools/tools_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="176">
+          <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+          <folding>
+            <element signature="e#15#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

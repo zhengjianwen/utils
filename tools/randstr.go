@@ -4,7 +4,6 @@ import (
 	"strings"
 	"strconv"
 	"crypto/rand"
-	"time"
 
 	"github.com/kless/osutil/user/crypt/sha512_crypt"
 )
