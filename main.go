@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main1()  {
 	wx.Init()
 	go wx.SyncToken()
 	userid := "o9FYQ1OY3fLKPLUvV6RdnnU2un-A"
